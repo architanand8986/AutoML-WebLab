@@ -66,5 +66,5 @@ This project combines the power of **Django** for backend hosting and **Bootstra
 
 ## Demo Video
 
-[Download or View the Demo Video]([https://github.com/yourusername/yourrepository/blob/main/assets/Demo.mp4](https://github.com/architanand8986/AI-ML-Model-Deployment/blob/main/Demo/Demo.mp4))
+[![Demo Video](https://img.youtube.com/vi/796gbQCJ42Y/0.jpg)](https://www.youtube.com/watch?v=796gbQCJ42Y)
 
