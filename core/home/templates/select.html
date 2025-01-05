@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block start %}
+
+<div class="container py-5">
+    <!-- Title Section -->
+    <div class="text-center mb-5">
+        <h1 class="display-4">Choose Your Model</h1>
+        <p class="lead text-muted">Select the type of regression analysis you want to perform</p>
+    </div>
+
+    <!-- Cards Container -->
+    <div class="row justify-content-center g-4">
+        <!-- Linear Regression Card -->
+        <div class="col-md-5">
+            <div class="card h-100 shadow-sm hover-shadow transition">
+                <div class="card-body text-center p-4">
+                    <h3 class="card-title mb-3">Linear Regression</h3>
+                    <p class="card-text text-muted mb-4">Predict continuous values using linear relationship between variables</p>
+                    <a href="/linear/" class="btn btn-primary btn-lg px-4">Select Linear</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logistic Regression Card -->
+        <div class="col-md-5">
+            <div class="card h-100 shadow-sm hover-shadow transition">
+                <div class="card-body text-center p-4">
+                    <h3 class="card-title mb-3">Logistic Regression</h3>
+                    <p class="card-text text-muted mb-4">Classify binary outcomes using probability estimation</p>
+                    <a href="/logistic/" class="btn btn-success btn-lg px-4">Select Logistic</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Support Vector Machine -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm hover-shadow transition">
+                <div class="card-body text-center p-4">
+                    <h3 class="card-title mb-3">Support Vector Machine</h3>
+                    <p class="card-text text-muted mb-4">Classify data using hyperplane optimization</p>
+                    <a href="/svm/" class="btn btn-info btn-lg px-4">Select SVM</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decision Tree -->
+        <div class="col-md-5">
+            <div class="card h-100 shadow-sm hover-shadow transition">
+                <div class="card-body text-center p-4">
+                    <h3 class="card-title mb-3">Decision Tree</h3>
+                    <p class="card-text text-muted mb-4">Classify binary outcomes using tree-based decisions</p>
+                    <a href="/decision-tree/" class="btn btn-warning btn-lg px-4">Select Decision Tree</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+{% endblock %}

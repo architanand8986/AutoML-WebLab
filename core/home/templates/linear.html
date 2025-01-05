@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block start %}
+<div class="container py-5">
+    <!-- Title Section -->
+    <div class="text-center mb-5">
+        <h1 class="display-4">Linear Regression Results</h1>
+        <p class="lead text-muted">Analysis and Predictions from your Dataset</p>
+    </div>
+
+    <!-- MSE Score Card -->
+    <div class="card mb-4 border-0 shadow-sm hover-shadow">
+        <div class="card-body text-center">
+            <h5 class="card-title text-primary">Mean Squared Error</h5>
+            <p class="display-6 mb-0">{{ mse|floatformat:4 }}</p>
+        </div>
+    </div>
+
+    <!-- Predictions Table -->
+    <div class="card mb-4 border-0 shadow-sm hover-shadow">
+        <div class="card-body">
+            <h5 class="card-title text-primary mb-4">Predictions</h5>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Predicted Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for prediction in predictions %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ prediction|floatformat:2 }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Visualization Section -->
+    <div class="card border-0 shadow-sm hover-shadow">
+        <div class="card-body">
+            <h5 class="card-title text-primary mb-4">Visualization</h5>
+            <div class="border rounded p-3 bg-light">
+                {{ visualization|safe }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Model -->
+    <div class="card border-0 shadow-sm hover-shadow">
+        <div class="card-body text-center">
+            <h5 class="card-title text-primary">Download Model</h5>
+            <a href="/download-model/{{ model_filename }}" class="btn btn-success">
+                <i class="fas fa-download"></i> Download Trained Model
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Custom CSS -->
+<style>
+    .hover-shadow {
+        transition: all 0.3s ease-in-out;
+    }
+    .hover-shadow:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+    .card {
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .table {
+        margin-bottom: 0;
+    }
+    .display-6 {
+        font-weight: 600;
+        color: #0d6efd;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block start %}
+
+<div class="container-fluid py-5 bg-light">
+    <!-- Hero Section -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">ML Model Predictor</h1>
+        <p class="lead text-muted">Upload your dataset to get started with predictions</p>
+    </div>
+
+    <!-- Upload Form Section -->
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form class="card p-4 shadow-lg border-0 bg-white" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                <!-- Form Header -->
+                <div class="text-center mb-4">
+                    <h2 class="h3 fw-bold">Dataset Upload</h2>
+                    <p class="text-muted small">Supported formats: CSV files</p>
+                </div>
+                
+                <hr class="my-4">
+                
+                <!-- Upload Instructions -->
+                <div class="alert alert-info mb-4">
+                    <h5 class="alert-heading"><i class="fas fa-info-circle"></i> Instructions</h5>
+                    <ul class="mb-0">
+                        <li>File must be in CSV format</li>
+                        <li>Last column should be the target variable</li>
+                        <li>Ensure no missing values</li>
+                    </ul>
+                </div>
+
+                <!-- File Upload Input -->
+                <div class="mb-4">
+                    <label for="datasetUpload" class="form-label fw-bold">
+                        <i class="fas fa-file-upload"></i> Select Dataset:
+                    </label>
+                    <input type="file" 
+                           required 
+                           class="form-control form-control-lg" 
+                           name="dataset" 
+                           id="datasetUpload"
+                           accept=".csv">
+                    <div class="form-text">Maximum file size: 10MB</div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary btn-lg w-100 hover-lift">
+                    <i class="fas fa-upload me-2"></i>Upload Dataset
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Styles
+<style>
+    .hover-lift {
+        transition: transform 0.2s ease;
+    }
+    .hover-lift:hover {
+        transform: translateY(-2px);
+    }
+    .card {
+        border-radius: 15px;
+    }
+</style> -->
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+{% endblock %}
