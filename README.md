@@ -49,18 +49,18 @@ This project combines the power of **Django** for backend hosting and **Bootstra
    git clone https://github.com/architanand8986/AI-ML-Model-Deployment.git
 2. Navigate to the project directory
    ```bash
-  cd AI-ML-Model-Deployment
+   cd AI-ML-Model-Deployment
 
 3. Install dependencies
    ```bash
-  pip install -r requirements.txt
+   pip install -r requirements.txt
 
 4. Run migrations
    ```bash
-  python manage.py makemigrations
-  python manage.py migrate
+    python manage.py makemigrations
+    python manage.py migrate
 
 5. Start the development server
    ```bash
-  python manage.py runserver
+    python manage.py runserver
 
