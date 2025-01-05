@@ -64,3 +64,11 @@ This project combines the power of **Django** for backend hosting and **Bootstra
    ```bash
    python manage.py runserver
 
+## Demo Video
+
+Here’s a quick demo of the project in action:
+
+<video controls>
+  <source src="Demo.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
