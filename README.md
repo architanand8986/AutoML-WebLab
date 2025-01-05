@@ -57,10 +57,10 @@ This project combines the power of **Django** for backend hosting and **Bootstra
 
 4. Run migrations
    ```bash
-    python manage.py makemigrations
-    python manage.py migrate
+   python manage.py makemigrations
+   python manage.py migrate
 
 5. Start the development server
    ```bash
-    python manage.py runserver
+   python manage.py runserver
 
