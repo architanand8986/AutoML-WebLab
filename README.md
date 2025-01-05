@@ -66,9 +66,5 @@ This project combines the power of **Django** for backend hosting and **Bootstra
 
 ## Demo Video
 
-Here’s a quick demo of the project in action:
+[Download or View the Demo Video]([https://github.com/yourusername/yourrepository/blob/main/assets/Demo.mp4](https://github.com/architanand8986/AI-ML-Model-Deployment/blob/main/Demo/Demo.mp4))
 
-<video controls>
-  <source src="[Demo/Demo.mp4](https://github.com/architanand8986/AI-ML-Model-Deployment/blob/main/Demo/Demo.mp4)" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
