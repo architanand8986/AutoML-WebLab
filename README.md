@@ -1,4 +1,4 @@
-# AI/ML Model Deployment with Django  
+# AutoML-WebLab with Django  
 
 This project combines the power of **Django** for backend hosting and **Bootstrap** for a responsive frontend, creating a seamless platform for deploying and interacting with AI/ML models. Users can upload datasets, train machine learning models, evaluate their performance, and download trained models for future use.
 
